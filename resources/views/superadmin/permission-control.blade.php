@@ -21,6 +21,7 @@
                 <h2 class="mb-6 font-semibold text-2xl">Add User</h2>
                 <!-- Form -->
                 <form method="POST" action="" id="modalForm">
+                    @csrf
                     <!-- Full name for another user -->
                     <div class="mt-2">
                         <x-input-label for="adminName" :value="__('Full name')" />
@@ -28,21 +29,21 @@
                             <!-- Last name -->
                             <div class="w-1/3">
                                 <x-text-input id="superadmin_lname" class="block mt-1 w-full" type="text"
-                                    name="superadmin_lname" :value="old('superadmin_lname')" required autofocus
+                                    name="adminLname" :value="old('superadmin_lname')" required autofocus
                                     autocomplete="superadmin_lname" placeholder="Last name" />
                                 <x-input-error :messages="$errors->get('pi_lname')" class="mt-2" />
                             </div>
                             <!-- First name -->
                             <div class="w-1/3">
                                 <x-text-input id="superadmin_fname" class="block mt-1 w-full" type="text"
-                                    name="superadmin_fname" :value="old('superadmin_fname')" required autofocus
+                                    name="adminFname" :value="old('superadmin_fname')" required autofocus
                                     autocomplete="superadmin_fname" placeholder="First name" />
                                 <x-input-error :messages="$errors->get('pi_fname')" />
                             </div>
                             <!-- Middle Initial -->
                             <div class="w-1/3">
                                 <x-text-input id="superadmin_mname" class="block mt-1 w-full" type="text"
-                                    name="superadmin_mname" maxlength="4" :value="old('superadmin_mname')" required
+                                    name="adminMI" maxlength="4" :value="old('superadmin_mname')" required
                                     autofocus autocomplete="superadmin_mname" placeholder="Middle Initial" />
                                 <x-input-error :messages="$errors->get('superadmin_mname')" class="mt-2" />
                             </div>
@@ -52,7 +53,7 @@
                     <!-- Classify users -->
                     <div class="mt-2">
                         <x-input-label for="user" :value="__('Type of user')" />
-                        <x-combobox-user-type id="user" name="user" class="mt-1 w-full" />
+                        <x-combobox-user-type id="user" name="adminAccess" class="mt-1 w-full" />
                         <x-input-error :messages="$errors->get('user')" class="mt-2" />
                     </div>
 
