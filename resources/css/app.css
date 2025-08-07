@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dataTables_length select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #ccc;
+    border-radius: 0.375rem;
+    background-color: white;
+    font-size: 0.875rem;
+    min-width: 3.500rem;
+}
+
+:root {
+    --primary: #5c297c;
+    --secondary: #f0a71f;
+    --light: #ffffff;
+    --gray: #dbdbdb;
+    --darkgray: #a9a9a9;
+    --lightgray: #f5f5f5;
+    --blue: #0096ff;
+    --darkblue: #00008b;
+    --whitepurple: #9954c4;
+}
