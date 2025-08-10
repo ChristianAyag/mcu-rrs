@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dataTables_length select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #ccc;
+    border-radius: 0.375rem;
+    background-color: white;
+    font-size: 0.875rem;
+    min-width: 3.250rem;
+}
+
+#myTable tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+#myTable tbody tr:nth-child(even) {
+    background-color: var(--lightgray);
+}
+
+#myTable tbody tr {
+    border-bottom: 1px solid #000000;
+}
+
+.dataTables_paginate .paginate_button {
+    font-size: 15px;  
+}
+
+.dataTables_info {
+    font-size: 15px;
+}
+
+.dataTables_length {
+    font-size: 14px;
+}
+
+.dataTables_filter {
+    font-size: 15px;
+}
+
+.dataTables_filter input {
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 560px) {
+    .dataTables_info {
+        font-size: 13px;
+    }
+    
+    .dataTables_length select {
+        font-size: 13px;
+        padding: 1px;
+    }
+    
+    .dataTables_paginate .paginate_button {
+        font-size: 13px;  
+    }
+
+    .dataTables_filter input {
+        width: 200px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .dataTables_info {
+        font-size: 13px;
+    }
+    
+    .dataTables_length select {
+        font-size: 13px;
+        padding: 1px;
+    }
+    
+    .dataTables_paginate .paginate_button {
+        font-size: 13px;  
+    }
+
+    .dataTables_filter {
+        font-size: 13px;
+    }
+
+    .dataTables_filter input {
+        font-size: 13px;
+        width: 200px;
+        height: 25px;
+        margin-bottom: 10px;
+    }
+}
+
+:root {
+    --primary: #5c297c;
+    --secondary: #f0a71f;
+    --light: #ffffff;
+    --gray: #dbdbdb;
+    --darkgray: #a9a9a9;
+    --lightgray: #f5f5f5;
+    --blue: #0096ff;
+    --darkblue: #00008b;
+    --whitepurple: #9954c4;
+}
